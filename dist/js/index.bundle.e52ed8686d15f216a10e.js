@@ -1,0 +1,2 @@
+webpackJsonp([0],[function(e,t,n){"use strict";var r=n(1);document.querySelector("#root").appendChild(r())},function(e,t,n){"use strict";e.exports=function(){var e=document.createElement("div");return e.textContent="Hi there and greetings!",e}}],[0]);
+//# sourceMappingURL=index.bundle.e52ed8686d15f216a10e.js.map

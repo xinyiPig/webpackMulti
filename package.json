@@ -1,0 +1,36 @@
+{
+  "name": "webpackmulti",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "set NODE_ENV=dev && webpack-dev-server --open",
+    "build": "set NODE_ENV=prod && webpack -p",
+    "lint": "set NODE_ENV=lint && webpack-dev-server --open",
+    "serve": "http-server ./dist -p 8888 -o",
+    "serve2": "http-server ./dist -p 8888"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^7.1.3",
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "css-loader": "^0.28.7",
+    "eslint": "^4.6.1",
+    "eslint-loader": "^1.9.0",
+    "extract-text-webpack-plugin": "^3.0.0",
+    "file-loader": "^0.11.2",
+    "html-webpack-plugin": "^2.30.1",
+    "http-server": "^0.10.0",
+    "postcss-loader": "^2.0.6",
+    "style-loader": "^0.18.2",
+    "url-loader": "^0.5.9",
+    "webpack": "^3.5.5",
+    "webpack-dev-server": "^2.7.1",
+    "webpack-merge": "^4.1.0"
+  }
+}
