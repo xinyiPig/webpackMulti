@@ -2,10 +2,179 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>小白成长日记</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=3, minimum-scale=1, user-scalable=no">
+
+    <script src="http://www.jq22.com/jquery/jquery-2.1.1.js"></script>
+    <script src="http://www.jq22.com/jquery/bootstrap-3.3.4.js"></script>
+    <link rel="stylesheet" type="text/css" href="http://www.jq22.com/jquery/bootstrap-3.3.4.css">
 </head>
+<style>
+    *{
+        font-family: monospace;
+    }
+    .containerWrapper{
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+    .headerWrapper {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+        background:rgba(33,33,33,0.4);
+    }
+    .scrollWrapper{
+        height:300vh;
+        position: relative;
+        top:0;
+    }
+    .navbar {
+        margin-bottom: 0;
+
+    }
+
+    .navbar-default {
+        background-color: transparent;
+        border-color: transparent;
+    }
+
+    .jumbotron {
+        position: relative;
+        z-index: 5;
+        height: 100vh;
+        margin-bottom: 0;
+        background-position: center bottom;
+        background-size:100%;
+    }
+
+    .jumbotron .desc {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .navbar-brand {
+        color: #fff;;
+    }
+
+    .navbar-default .navbar-brand {
+        color: #fff;
+    }
+
+    .navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+        /* color: #5e5e5e; */
+        /* font-size: 20px; */
+        color: #FFEB3B;
+        font-weight: bold;
+        background-color: transparent;
+    }
+
+    .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+        color: #FFEB3B;
+        background-color: rgba(33, 33, 33, 0.3);
+    }
+    .navbar-default .navbar-nav > li > a {
+        color: #fff;
+    }
+    .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #fff;
+    }
+    .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+        color: #FFEB3B;
+        background-color: transparent;
+    }
+    .jumbotron h1, .jumbotron .h1 {
+        font-size: 41px;
+        color: white;
+        padding: 15px;
+        border-radius: 10px;
+        background: rgba(33,33,33,0.6);
+    }
+    @media (max-width:720px){
+        .jumbotron h1, .jumbotron .h1 {
+            font-size: 18px;
+            padding: 5px;
+        }
+        .jumbotron {
+            background-size:unset
+        }
+
+    }
+    .blur{
+        -webkit-filter: blur(0.8px); /* Chrome, Opera */
+        -moz-filter: blur(0.8px);
+        -ms-filter: blur(0.8px);
+        filter: blur(0.8px);
+    }
+    .navbar-toggle {
+        background-color: #ddd;
+    }
+</style>
 <body>
-<h1>index</h1>
-<div id="root"></div>
+<div class="containerWrapper">
+    <div class="headerWrapper ">
+        <nav class="navbar navbar-default ">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">点滴进步都做记录</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-haspopup="true" aria-expanded="false">分类 <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">全部分类</a></li>
+                                <li role="separator" class="divider"></li>
+                                <li><a href="#">JavaScript</a></li>
+                                <li><a href="#">JQuery</a></li>
+                                <li><a href="#">Canvas</a></li>
+                                <li><a href="#">css</a></li>
+                                <li><a href="#">Node</a></li>
+                                <li><a href="#">webpack</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+    </div>
+    <div class="scrollWrapper">
+        <div class="jumbotron"
+             style="background-image:url(http://demo.cssmoban.com/cssthemes3/ft5_6_booster/images/slide_2.jpg)">
+            <div class="desc">
+                <h1>当做一个备忘录</h1>
+            </div>
+
+        </div>
+        <div class="jumbotron"
+             style="background-image:url(http://demo.cssmoban.com/cssthemes3/ft5_6_booster/images/slide_3.jpg)">
+            <div class="desc">
+                <h1>当做一次练手</h1>
+            </div>
+        </div>
+        <div class="jumbotron"
+             style="background-image:url(http://demo.cssmoban.com/cssthemes3/ft5_6_booster/images/slide_1.jpg)">
+            <div class="desc">
+                <h1>当做一个分享平台</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
